@@ -1,13 +1,21 @@
 .container {
   margin: 50px 0;
 }
-
+.card{
+  margin:0 50px !important;
+}
 .infected {
   border-bottom: 10px solid red;
+  
 }
 .recovered {
   border-bottom: 10px solid green;
 }
 .deaths {
   border-bottom: 10px solid blue;
+}
+@media (max-width:960px){
+  .container{
+    text-align: center;
+  }
 }
