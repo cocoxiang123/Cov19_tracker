@@ -7,6 +7,6 @@ React app can track global amount of people infected, recovered, deaths.
 Cov19 API, Material UI, React-Chart, CountUp,etc.
 
 screenshorts:
-![](/img/png1)
-![](/img/png2)
-![](/img/png3)
+![](./img/png1)
+![](./img/png2)
+![](./img/png3)
