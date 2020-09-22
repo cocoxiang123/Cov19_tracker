@@ -8,6 +8,8 @@ Cov19 API, Material UI, React-Chart, CountUp,etc.
 
 screenshorts:
 
+### DeskTop
 ![](img/png1.png)
 ![](img/png2.png)
+### Mobile
 ![](img/png3.png)
