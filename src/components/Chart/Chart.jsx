@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { fetchEveryDayData } from "../../api";
-import { Line, Bar } from "react-chartjs-2";
+import React from "react";
+import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.css";
 function Chart({ country, data: { confirmed, recovered, deaths } }) {
-  const [dailyData, setDailyData] = useState([]);
+  // const [dailyData, setDailyData] = useState([]);
 
-  useEffect(() => {
-    const fetchAPI = async () => {
-      setDailyData(await fetchEveryDayData());
-    };
-    fetchAPI();
-  }, []);
+  // useEffect(() => {
+  //   const fetchAPI = async () => {
+  //     setDailyData(await fetchEveryDayData());
+  //   };
+  //   fetchAPI();
+  // }, []);
 
-  const lineChart = !dailyData ? <h1>Data not Found!</h1> : (
+  /* const lineChart = !dailyData ? <h1>Data not Found!</h1> : (
     <Line
       data={{
         labels: dailyData.map(({ date }) => date),
@@ -33,7 +32,7 @@ function Chart({ country, data: { confirmed, recovered, deaths } }) {
       }}
     />
   );
-
+ */
   const barChart = confirmed ? (
     <Bar
       data={{
