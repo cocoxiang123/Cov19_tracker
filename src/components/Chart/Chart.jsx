@@ -12,7 +12,7 @@ function Chart({ country, data: { confirmed, recovered, deaths } }) {
     fetchAPI();
   }, []);
 
-  const lineChart = !dailyData.length ? null : (
+  const lineChart = !dailyData ? <h1>Data not Found!</h1> : (
     <Line
       data={{
         labels: dailyData.map(({ date }) => date),
@@ -48,12 +48,15 @@ function Chart({ country, data: { confirmed, recovered, deaths } }) {
       }}
       options={{
         legend: { display: false },
-        title: { display: true, text: `Current state in ${country}` },
-      }}
+        title: {
+          display: true, text: "Current state in" + country ? country : 'Global'
+        }
+      }
+      }
     />
   ) : null;
   return (
-    <div className={styles.container}>{country ? barChart : lineChart}</div>
+    <div className={styles.container}>{barChart}</div>
   );
 }
 
